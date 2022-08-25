@@ -1,0 +1,32 @@
+.notes--mainbar {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.notes--mainbar--input {
+  height: 400px;
+}
+.notes--mainbar--input > input[type="text"] {
+  display: block;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  width: 1000px;
+  padding: 10px 0;
+  font-size: 25px;
+}
+
+.notes--mainbar--input > textarea {
+  margin-bottom: 20px;
+  height: 300px;
+  width: 1000px;
+  resize: none;
+  padding: 10px;
+}
+
+.notes-mainbar--input--preview {
+  background-color: rgb(248, 247, 245);
+  height: 297px;
+  padding: 10px;
+  border-top: 1px solid wheat;
+}
+
