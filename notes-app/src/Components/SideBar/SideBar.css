@@ -1,0 +1,41 @@
+.notes--sidebar {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(188, 183, 183);
+  height: 100vh;
+  padding: 10px;
+}
+
+.notes--sidebar--title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.notes--sidebar--title > button {
+  background: none;
+  border: none;
+  color: lightskyblue;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.notes-sidebar--note-snippet {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.notes-sidebar--note-snippet:hover {
+  background-color: rgb(244, 239, 239);
+}
+
+.notes-sidebar--note-snippet > button {
+  background: none;
+  border: none;
+  font-weight: 900;
+  cursor: pointer;
+  color: red;
+}
