@@ -1,7 +1,9 @@
 .notes--mainbar {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 100%;
 }
 .notes--mainbar--input {
   height: 400px;
@@ -30,3 +32,8 @@
   border-top: 1px solid wheat;
 }
 
+.no-active-note {
+  font-size: 32px;
+  margin: 20rem auto;
+  color: #999999;
+}
