@@ -15,6 +15,7 @@ function App() {
   // React.useEffect(() => {
   //   localStorage.setItem("notes", JSON.stringify(notes));
   // }, [notes]);
+
   // *** WHEN WE CLICK ON THE 'add' BUTTON THIS FUNCTION GET'S TRIGGERED
   function addNotes() {
     const newNote = {
@@ -25,13 +26,15 @@ function App() {
     };
     setNotes([newNote, ...notes]);
   }
+
   // *** WHEN WE CLICK ON THE 'delete' BUTTON THIS FUNCTION GET'S TRIGGERED
   const deleteNotes = (idToDelete) => {
-    // *** 'filter' will check if 'note.id'(id created will we pressed the 'add' button) and the 'idToDelete'(which got generated when we clicked on the 'delete' button) is same: if it is not same then it gets filtered out from the array, which eventually deletes our note(or technically gets removed from the array)
-    return setNotes(notes.filter((note) => note.id != idToDelete));
+    // *** 'filter' will check if 'note.id'(id created while we pressed the 'add' button) and the 'idToDelete'(which got generated when we clicked on the 'delete' button) is same: if it is not same then it gets filtered out from the array, which eventually deletes our note(or technically gets removed from the array)
+    return setNotes(notes.filter((note) => note.id !== idToDelete));
   };
+
   const getActiveNote = () => {
-    return notes.find((note) => note.id == activeNote);
+    return notes.find((note) => note.id === activeNote);
   };
 
   const onUpdateNote = (updatedNote) => {

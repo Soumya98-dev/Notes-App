@@ -2,14 +2,15 @@ import React from "react";
 import "./MainBar.css";
 import ReactMarkdown from "react-markdown";
 
-function MainBar({ activeNote, onUpdateNote }) {
-  const onEditNote = (key, value) => {
+const MainBar = ({ activeNote, onUpdateNote }) => {
+  const onEditField = (field, value) => {
     onUpdateNote({
       ...activeNote,
-      [key]: value,
+      [field]: value,
       lastModified: Date.now(),
     });
   };
+ 
   // *** BELOW CODE WILL RUN IF THERE IS NO ID RETURNED FROM 'activeNote' prop
   if (!activeNote) {
     return <div className="no-active-note">No Active Note</div>;
@@ -22,14 +23,14 @@ function MainBar({ activeNote, onUpdateNote }) {
           type="text"
           autoFocus
           id="title"
-          onChange={(event) => onEditNote("title", event.target.value)}
           value={activeNote.title}
+          onChange={(e) => onEditField("title", e.target.value)}
         />
         <br />
         <textarea
           id="body"
           placeholder="Write your note here..."
-          onChange={(event) => onEditNote("body", event.target.value)}
+          onChange={(event) => onEditField("body", event.target.value)}
           value={activeNote.body}
         />
       </div>
@@ -40,6 +41,6 @@ function MainBar({ activeNote, onUpdateNote }) {
       </div>
     </div>
   );
-}
+};
 
 export default MainBar;
