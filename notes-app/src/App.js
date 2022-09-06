@@ -5,16 +5,16 @@ import MainBar from "./Components/MainBar/MainBar";
 import SideBar from "./Components/SideBar/SideBar";
 
 function App() {
-  // const [notes, setNotes] = React.useState(
-  //   JSON.parse(localStorage.notes) || []
-  // );
-  const [notes, setNotes] = React.useState([]);
+  const [notes, setNotes] = React.useState(
+    localStorage.notes ? JSON.parse(localStorage.notes) : []
+  );
+  // const [notes, setNotes] = React.useState([]);
   const [activeNote, setActiveNote] = React.useState(true);
 
   // *** TO STORE OUR DATA IN THE LOCALSTORAGE
-  // React.useEffect(() => {
-  //   localStorage.setItem("notes", JSON.stringify(notes));
-  // }, [notes]);
+  React.useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   // *** WHEN WE CLICK ON THE 'add' BUTTON THIS FUNCTION GET'S TRIGGERED
   function addNotes() {
