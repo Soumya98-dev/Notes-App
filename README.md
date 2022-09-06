@@ -6,6 +6,6 @@ I have used **react-markdown** to enable the markdown in the notes preview.
 
 Also, used **react-uuid** for generating random ids so that we can sync between our _SideBar_ and _MainBar_ also with _Preview_ part of web app.
 
-Also implemented the functionality of **local storage**
+Also implemented the functionality of **local storage** using _useEffect() hook_
 
 **Live Site : https://soumya98-dev.github.io/Notes-App/**
